@@ -9,6 +9,7 @@ class DataHandler{
     function __construct($dbasename, $username, $password ){
         $this->dbasename= $dbasename;
         $this->password= $password;
+        
         $this->username= $username;
         $this->servername= "localhost";
         try{

@@ -1,7 +1,11 @@
 <?php
+include "../controller/controller.php";
 include "./header.php";
+$content = new controller();
+
+$content->handleRequest();
 ?>
-<div class="flex-grow"> <?php include "./home.php"?></div>
+
 <?php
 include "./footer.php";
 ?>

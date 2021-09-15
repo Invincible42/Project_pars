@@ -2,8 +2,8 @@
 require_once dirname(__FILE__) . "/dataHandler.php";
     class userLogic{
         public function __construct(){
-            $username = fopen("./username.txt", "r") or die("Unable to open file!");
-            $password = fopen("./password.txt", 'r') or die ("Unable to open file!");
+            $username = fgets(fopen("../model/username.txt", "r"));
+            $password = fgets(fopen("../model/password.txt", 'r'));
             $dbasename = "pars";
             $this->Datahandler = new DataHandler($dbasename, $username, $password);
         }
