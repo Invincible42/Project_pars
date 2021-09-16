@@ -12,22 +12,22 @@ class router{
             $route =  isset($_REQUEST['route'])? $_REQUEST['route']: NULL;
             switch($route){
                 case "home":
-                    include "./home.php";
+                    include "./view/home.php";
                     break;
-                case "search":
-                    include "./search.php";
+                case "add-music":
+                    include "./view/addsong.php";
                     break;
                 case "my-settings":
-                    include "./my-settings.php";
+                    include "./view/my-settings.php";
                     break;
                 case "my-library":
-                    include "./my-library.php";
+                    include "./view/my-library.php";
                     break;    
                 case "account":
-                    include "./account.php";
+                    include "./view/account.php";
                 break;    
                 case "playlist":
-                    include "./playlist.php";
+                    include "./view/playlist.php";
                 break;
             }
         }catch(Exception $e){
