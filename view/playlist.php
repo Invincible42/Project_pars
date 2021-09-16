@@ -7,7 +7,8 @@
     <span class="text-base">Date of creation</span>
 </div>
 
-<div class="flex flex-row justify-between">
+<?php for($i = 0; $i < 15; $i++) { ?>
+<div class="flex flex-row justify-between border-t border-b border-black border-collapse">
     <div class="flex flex-row">
         <div class="self-center m-2">
             <span class="material-icons">play_circle_filled</span>
@@ -25,4 +26,5 @@
         <span class="material-icons">star_outline</span>
     </div>
 </div>
+<?php } ?>
 
