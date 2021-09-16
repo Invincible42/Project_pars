@@ -12,17 +12,17 @@ class controller{
         try{
             $route =  isset($_REQUEST['route'])? $_REQUEST['route']: NULL;
             switch($route){
-                case "home":
-                    include "./home.php";
-                    break;
-                case "search":
-                    include "./search.php";
-                    break;
-                case "read":
-                    include "./addsong.php";
+                case "add":
+                    
                     break;
                 case "update":
-                    include "./myplaylists.php";
+                  
+                    break;
+                case "read":
+                   
+                    break;
+                case "delete":
+                
                     break;    
             }
         }catch(Exception $e){
@@ -31,4 +31,3 @@ class controller{
     }
 }
 ?>
-

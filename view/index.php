@@ -1,7 +1,7 @@
 <?php
-include "../controller/controller.php";
+include "../controller/router.php";
 include "./header.php";
-$content = new controller();
+$content = new router();
 
 $content->handleRequest();
 ?>
