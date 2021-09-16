@@ -11,7 +11,7 @@
 <body class="bg-gray-600">
     <div class="flex justify-between bg-gray-700 border-b-4 border-parsOrange">
         <div class="ml-4">
-            <h2 class="text-4xl text-parsOrange m-auto my-2">PARS</h2>
+            <a href="?route=home"><h2 class="text-4xl text-parsOrange m-auto my-2">PARS</h2></a>
         </div>
         <div class="mr-4">
             <a href="?route=my-settings" class="material-icons text-4xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">settings</a>
