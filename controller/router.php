@@ -26,6 +26,9 @@ class router{
                 case "account":
                     include "./account.php";
                 break;    
+                case "playlist":
+                    include "./playlist.php";
+                break;
             }
         }catch(Exception $e){
             throw $e;
