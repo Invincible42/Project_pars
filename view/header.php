@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/icons.css">
     <title>PARS</title>
 </head>
-<body class=" bg-gray-600">
+<body class="bg-gray-600">
     <div class="flex justify-between bg-gray-700 border-b-4 border-parsOrange">
         <div class="ml-4">
             <h2 class="text-4xl text-parsOrange m-auto my-2">PARS</h2>
