@@ -3,9 +3,11 @@ include "./controller/router.php";
 include "./controller/UserController.php";
 include "./view/header.php";
 $content = new router();
-
-$content->handleRequest();
-
+?>
+<main class="flex-grow">
+<?php $content->handleRequest(); ?>
+</main>
+<?php
 $userLogic = new UserController();
 $userLogic->handleRequest();
 ?>
