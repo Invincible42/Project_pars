@@ -7,11 +7,19 @@
             </div>
             <div class="my-4">
                 <span>Username</span>
+<<<<<<< Updated upstream
                 <input type="text" name="username" id="" class="w-full rounded p-1 bg-gray-600 border-parsOrange border-2  focus:outline-none">
             </div>
             <div class="my-4">
                 <span>Password</span>
                 <input type="password" name="password" id="" class="w-full rounded p-1 bg-gray-600 border-parsOrange border-2  focus:outline-none">
+=======
+                <input type="text" name="username" id="" class="w-full rounded p-1 focus:outline-none required">
+            </div>
+            <div class="my-4">
+                <span>Password</span>
+                <input type="password" name="password" id="" class="w-full rounded p-1 focus:outline-none required">
+>>>>>>> Stashed changes
             </div>
             <div class="my-8">
                 <button onclick="submitForm('login', 'index.php?action=login', 'index.php?route=home')" class="p-2 bg-gray-600 rounded">Login</button>
