@@ -8,11 +8,15 @@ class userLogic{
         $this->Datahandler = new DataHandler($dbasename, $username, $password);
     }
 
-    public function createUser($username, $password) {
+    public function createUser($username, $password, $repassword) {
         try{
-            $sql= "INSERT INTO users (username, password) VALUES (?, ?)";
-            $result = $this->Datahandler->createData($sql, [$username, $password]);
-            return $result;
+            if ($password === $repassword) {
+                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+                $sql= "INSERT INTO users (username, password) VALUES (?, ?)";
+                $result = $this->Datahandler->createData($sql, [$username, $hashedPassword]);
+                return $result;
+            }
+            exit();
         }catch(Exception $e){
             throw $e;
         }

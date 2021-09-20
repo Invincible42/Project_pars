@@ -36,11 +36,7 @@ class UserController {
         if(!isset($_REQUEST["password"])) throw new Exception();
         if(!isset($_REQUEST["re_enter_password"])) throw new Exception();
 
-        $hashed_password = password_hash($_REQUEST["password"], PASSWORD_DEFAULT);
-
-        if($_REQUEST["password"] === $_REQUEST["re_enter_password"]) {
-            $this->Userlogic->createUser($_REQUEST["username"], $hashed_password);
-        }
+        $this->Userlogic->createUser($_REQUEST["username"], $_REQUEST["password"], $_REQUEST["re_enter_password"]);
     }
 
     public function collectReadUser($id) {
