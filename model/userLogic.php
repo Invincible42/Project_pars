@@ -2,8 +2,8 @@
 require_once dirname(__FILE__) . "/dataHandler.php";
 class userLogic{
     public function __construct() {
-        $username = fgets(fopen("../model/username.txt", "r"));
-        $password = fgets(fopen("../model/password.txt", 'r'));
+        $username = fgets(fopen("./model/username.txt", "r"));
+        $password = fgets(fopen("./model/password.txt", 'r'));
         $dbasename = "pars";
         $this->Datahandler = new DataHandler($dbasename, $username, $password);
     }
@@ -21,7 +21,7 @@ class userLogic{
     public function deleteUser($id) {
         try {
             $sql = "DELETE FROM users WHERE ID = ?";
-            $result = $this->Datahandler->deleteData($sql);
+            $result = $this->Datahandler->deleteData($sql, $id);
             return $result;
         }catch(Exception $e){
             throw $e;

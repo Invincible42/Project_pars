@@ -19,14 +19,8 @@ class UserController {
                 case "read":
                     $this->collectReadUser($id);
                     break;
-                case "update":
-                    $this->collectUpdateUser();
-                    break;
                 case "delete":
                     $this->collectDeleteUser($id);
-                    break;
-                default:
-                    echo "I didn't get far did I?";
                     break;
             }
         }catch(Exception $e){
@@ -42,11 +36,6 @@ class UserController {
 
     public function collectReadUser($id) {
         $user = $this->Userlogic->readUser($id);
-        return $user;
-    }
-
-    public function collectUpdateUser($username, $password) {
-        $user = $this->Userlogic->readUser($username, $password);
         return $user;
     }
 
