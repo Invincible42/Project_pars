@@ -38,6 +38,9 @@ module.exports = {
         "800": "#1F2937",
         "900": "#111827"
       }
+    },
+    fontFamily:{
+      speed: ['A4 Speed']
     }
   },
   variants: {
