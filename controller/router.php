@@ -32,6 +32,9 @@ class router{
                 case "registration":
                     include "./view/registration.php";
                 break;
+                case "login":
+                    include "./view/login.php";
+                    break;
             }
         }catch(Exception $e){
             throw $e;
