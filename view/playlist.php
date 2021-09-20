@@ -8,7 +8,7 @@
 </div>
 
 <?php for($i = 0; $i < 30; $i++) { ?>
-    <div class="">
+    <div class="text-parsOrange">
         <div class="flex flex-row justify-between hover:bg-gray-700 xl:mx-96 mx-2 rounded my-1">
             <div class="flex flex-row">
                 <div class="self-center m-2">
@@ -30,6 +30,7 @@
                 <span class="material-icons text-2xl">star_outline</span>
             </div>
         </div>
+        <div class="border-b border-black xl:mx-96"></div>
     </div>
 <?php } ?>
 
