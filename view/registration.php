@@ -7,15 +7,15 @@
             </div>
             <div class="my-4">
                 <span>Username</span>
-                <input type="text" name="username" id="" class="w-full rounded p-1 focus:outline-none">
+                <input type="text" name="username" id="" class="w-full bg-gray-600 border-parsOrange border-2  rounded p-1 focus:outline-none">
             </div>
             <div class="my-4">
                 <span>Password</span>
-                <input type="password" name="password" id="" class="w-full rounded p-1 focus:outline-none">
+                <input type="password" name="password" id="" class="w-full bg-gray-600 border-parsOrange border-2  rounded p-1 focus:outline-none">
             </div>
             <div class="my-4">
                 <span>Re-enter password</span>
-                <input type="password" name="password" id="" class="w-full rounded p-1 focus:outline-none">
+                <input type="password" name="password" id="" class="w-full bg-gray-600 border-parsOrange border-2  rounded p-1 focus:outline-none">
             </div>
             <div class="my-8">
                 <button onclick="submitForm('registration', 'index.php?action=create', 'index.php?route=login')" class="p-2 bg-gray-600 rounded">Register</button>
