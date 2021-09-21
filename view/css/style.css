@@ -16520,6 +16520,10 @@ video {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
+.text-transparent{
+  color: transparent;
+}
+
 .group:hover .group-hover\:text-parsRed{
   --tw-text-opacity: 1;
   color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -16607,6 +16611,10 @@ video {
 .group:hover .group-hover\:text-gray-900{
   --tw-text-opacity: 1;
   color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-transparent{
+  color: transparent;
 }
 
 .focus-within\:text-parsRed:focus-within{
@@ -16698,6 +16706,10 @@ video {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
+.focus-within\:text-transparent:focus-within{
+  color: transparent;
+}
+
 .hover\:text-parsRed:hover{
   --tw-text-opacity: 1;
   color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -16787,6 +16799,10 @@ video {
   color: rgba(17, 24, 39, var(--tw-text-opacity));
 }
 
+.hover\:text-transparent:hover{
+  color: transparent;
+}
+
 .focus\:text-parsRed:focus{
   --tw-text-opacity: 1;
   color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -16874,6 +16890,10 @@ video {
 .focus\:text-gray-900:focus{
   --tw-text-opacity: 1;
   color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+.focus\:text-transparent:focus{
+  color: transparent;
 }
 
 .text-opacity-0{
@@ -36236,6 +36256,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .sm\:text-transparent{
+    color: transparent;
+  }
+
   .group:hover .sm\:group-hover\:text-parsRed{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -36323,6 +36347,10 @@ video {
   .group:hover .sm\:group-hover\:text-gray-900{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .group:hover .sm\:group-hover\:text-transparent{
+    color: transparent;
   }
 
   .sm\:focus-within\:text-parsRed:focus-within{
@@ -36414,6 +36442,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .sm\:focus-within\:text-transparent:focus-within{
+    color: transparent;
+  }
+
   .sm\:hover\:text-parsRed:hover{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -36503,6 +36535,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .sm\:hover\:text-transparent:hover{
+    color: transparent;
+  }
+
   .sm\:focus\:text-parsRed:focus{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -36590,6 +36626,10 @@ video {
   .sm\:focus\:text-gray-900:focus{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .sm\:focus\:text-transparent:focus{
+    color: transparent;
   }
 
   .sm\:text-opacity-0{
@@ -55864,6 +55904,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .md\:text-transparent{
+    color: transparent;
+  }
+
   .group:hover .md\:group-hover\:text-parsRed{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -55951,6 +55995,10 @@ video {
   .group:hover .md\:group-hover\:text-gray-900{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .group:hover .md\:group-hover\:text-transparent{
+    color: transparent;
   }
 
   .md\:focus-within\:text-parsRed:focus-within{
@@ -56042,6 +56090,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .md\:focus-within\:text-transparent:focus-within{
+    color: transparent;
+  }
+
   .md\:hover\:text-parsRed:hover{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -56131,6 +56183,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .md\:hover\:text-transparent:hover{
+    color: transparent;
+  }
+
   .md\:focus\:text-parsRed:focus{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -56218,6 +56274,10 @@ video {
   .md\:focus\:text-gray-900:focus{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .md\:focus\:text-transparent:focus{
+    color: transparent;
   }
 
   .md\:text-opacity-0{
@@ -75492,6 +75552,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .lg\:text-transparent{
+    color: transparent;
+  }
+
   .group:hover .lg\:group-hover\:text-parsRed{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -75579,6 +75643,10 @@ video {
   .group:hover .lg\:group-hover\:text-gray-900{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .group:hover .lg\:group-hover\:text-transparent{
+    color: transparent;
   }
 
   .lg\:focus-within\:text-parsRed:focus-within{
@@ -75670,6 +75738,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .lg\:focus-within\:text-transparent:focus-within{
+    color: transparent;
+  }
+
   .lg\:hover\:text-parsRed:hover{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -75759,6 +75831,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .lg\:hover\:text-transparent:hover{
+    color: transparent;
+  }
+
   .lg\:focus\:text-parsRed:focus{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -75846,6 +75922,10 @@ video {
   .lg\:focus\:text-gray-900:focus{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .lg\:focus\:text-transparent:focus{
+    color: transparent;
   }
 
   .lg\:text-opacity-0{
@@ -95120,6 +95200,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .xl\:text-transparent{
+    color: transparent;
+  }
+
   .group:hover .xl\:group-hover\:text-parsRed{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -95207,6 +95291,10 @@ video {
   .group:hover .xl\:group-hover\:text-gray-900{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .group:hover .xl\:group-hover\:text-transparent{
+    color: transparent;
   }
 
   .xl\:focus-within\:text-parsRed:focus-within{
@@ -95298,6 +95386,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .xl\:focus-within\:text-transparent:focus-within{
+    color: transparent;
+  }
+
   .xl\:hover\:text-parsRed:hover{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -95387,6 +95479,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .xl\:hover\:text-transparent:hover{
+    color: transparent;
+  }
+
   .xl\:focus\:text-parsRed:focus{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -95474,6 +95570,10 @@ video {
   .xl\:focus\:text-gray-900:focus{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .xl\:focus\:text-transparent:focus{
+    color: transparent;
   }
 
   .xl\:text-opacity-0{
@@ -114748,6 +114848,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .\32xl\:text-transparent{
+    color: transparent;
+  }
+
   .group:hover .\32xl\:group-hover\:text-parsRed{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -114835,6 +114939,10 @@ video {
   .group:hover .\32xl\:group-hover\:text-gray-900{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .group:hover .\32xl\:group-hover\:text-transparent{
+    color: transparent;
   }
 
   .\32xl\:focus-within\:text-parsRed:focus-within{
@@ -114926,6 +115034,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .\32xl\:focus-within\:text-transparent:focus-within{
+    color: transparent;
+  }
+
   .\32xl\:hover\:text-parsRed:hover{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -115015,6 +115127,10 @@ video {
     color: rgba(17, 24, 39, var(--tw-text-opacity));
   }
 
+  .\32xl\:hover\:text-transparent:hover{
+    color: transparent;
+  }
+
   .\32xl\:focus\:text-parsRed:focus{
     --tw-text-opacity: 1;
     color: rgba(184, 47, 77, var(--tw-text-opacity));
@@ -115102,6 +115218,10 @@ video {
   .\32xl\:focus\:text-gray-900:focus{
     --tw-text-opacity: 1;
     color: rgba(17, 24, 39, var(--tw-text-opacity));
+  }
+
+  .\32xl\:focus\:text-transparent:focus{
+    color: transparent;
   }
 
   .\32xl\:text-opacity-0{
