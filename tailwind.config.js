@@ -23,7 +23,7 @@ module.exports = {
       black:{
         DEFAULT: "#000000"
       },
-      white:{
+      white:{ 
         DEFAULT: "#FFFFFFF"
       },
       gray:{

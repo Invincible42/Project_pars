@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./view/css/style.css">
     <link rel="stylesheet" href="./view/css/icons.css">
+    <script src="./view/js/overlay.js"></script>
     <title>PARS</title>
 </head>
 <body class="bg-gray-700 flex flex-col h-screen">

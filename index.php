@@ -11,7 +11,7 @@ $content = new router();
 $userLogic = new UserController();
 $userLogic->handleRequest();
 ?>
-
+<div id="overlay"></div>
 <?php
 include "./view/footer.php";
 ?>
