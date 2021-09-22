@@ -21,7 +21,7 @@
                 <button onclick="submitForm('registration', 'index.php?action=create', 'index.php?route=login')" class="p-2 bg-gray-600 rounded">Register</button>
             </div>
             <div class="my-4 text-sm">
-                <span>You already have an account? <a href="index.php?route=login" class="text-parsRed">Login</a></span>
+                <span>You already have an account? <a href="index.php?route=login" class="text-parsRed underline">Login</a></span>
             </div>
         </form>
     </div>

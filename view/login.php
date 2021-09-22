@@ -17,7 +17,7 @@
                 <button onclick="submitForm('login', 'index.php?action=login', 'index.php?route=home')" class="p-2 bg-gray-600 rounded">Login</button>
             </div>
             <div class="my-4 text-sm">
-                <span>You don't have an account? <a href="index.php?route=registration" class="text-parsRed">Register</a></span>
+                <span>You don't have an account? <a href="index.php?route=registration" class="text-parsRed underline">Register</a></span>
             </div>
         </form>
     </div>
