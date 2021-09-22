@@ -15,7 +15,7 @@
             <a href="?route=home"><h2 class="text-4xl text-parsOrange m-auto my-2 font-speed hover:text-parsDarkOrange">PARS</h2></a>
         </div>
         <div class="mr-4">
-            <a href="?route=account" class="material-icons text-4xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">account_circle</a>
+            <a href="?route=login" class="material-icons text-4xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">account_circle</a>
         </div>
     </div>
 
