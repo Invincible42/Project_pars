@@ -17,6 +17,9 @@ class router{
                 case "add-music":
                     include "./view/addsong.php";
                     break;
+                case "create-playlist":
+                    include "./view/createplaylist.php";
+                    break;
                 case "my-settings":
                     include "./view/my-settings.php";
                     break;

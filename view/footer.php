@@ -11,7 +11,7 @@
         </div>
         <div class="flex flex-col items-center w-1/4">
             <div>
-                <span><a href="?route=add-music" class="material-icons text-4xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">playlist_add</a></span>
+                <span><a href="?route=create-playlist" class="material-icons text-4xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">playlist_add</a></span>
             </div>
             <div>
                 <span class="text-gray-50 text-xs opacity-70">Create Playlist</span>

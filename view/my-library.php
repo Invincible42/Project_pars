@@ -1,10 +1,9 @@
-<?php
-?>
-
-<div>
-    <h2> My playlists</h2>
-</div>
-
-<div>
-    <h2>My songs</h2>
-</div>
+<section>
+    <div>
+        <div class="flex flex-col justify-center items-center mx-7 my-6">
+            <p class="text-gray-50 text-sm lg:text-2xl">
+                This page is coming soon!
+            </p>
+        </div>
+    </div>
+</section>
