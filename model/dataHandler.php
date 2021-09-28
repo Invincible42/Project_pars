@@ -30,7 +30,6 @@ class DataHandler{
         $stmt = $this->handle->prepare($sqlRead);
         $stmt->execute([$id]);
         $result= $stmt->fetchAll(PDO::FETCH_ASSOC);
-       
 
         return $result;
     }
@@ -38,7 +37,6 @@ class DataHandler{
         $stmt = $this->handle->prepare($sqlRead);
         $stmt->execute();
         $result= $stmt->fetchAll(PDO::FETCH_ASSOC);
-       
 
         return $result;
     }
@@ -46,13 +44,11 @@ class DataHandler{
     function updateData($sqlUpdate, $arguments) {
         $stmt = $this->handle->prepare($sqlUpdate);
         return $stmt->execute($arguments);
-        
     }
 
     function deleteData($sqlDelete) {
         $stmt = $this->handle->prepare($sqlDelete);
         return $stmt->execute();
-       
     }
     function __destruct(){
         $this->handle= null;

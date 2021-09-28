@@ -11,9 +11,8 @@ class userLogic{
     public function createUser($username, $password, $repassword) {
         try{
             if ($password === $repassword) {
-                $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                 $sql= "INSERT INTO users (username, password) VALUES (?, ?)";
-                $result = $this->Datahandler->createData($sql, [$username, $hashedPassword]);
+                $result = $this->Datahandler->createData($sql, [$username, $password]);
                 return $result;
             }
             exit();
