@@ -1,3 +1,6 @@
+<?php
+include "./view/header.php";
+?>
 <section>
     <script src="./view/js/ajax.js"></script>
     <div class="flex my-10 justify-center">
@@ -22,3 +25,6 @@
         </form>
     </div>
 </section>
+<?php
+include "./view/footer.php";
+?>

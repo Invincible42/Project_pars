@@ -1,6 +1,6 @@
 <?php
 
-
+include "./controller/UserController.php";
 class router{
     public function __construct()
     {
@@ -20,22 +20,25 @@ class router{
                 case "create-playlist":
                     include "./view/createplaylist.php";
                     break;
-                case "my-settings":
-                    include "./view/my-settings.php";
-                    break;
                 case "my-library":
                     include "./view/my-library.php";
                     break;    
                 case "account":
+                    $userLogics = new UserController();
+                    $userLogics->handleRequest();
                     include "./view/account.php";
                 break;    
                 case "playlist":
                     include "./view/playlist.php";
                 break;
                 case "registration":
+                    $userLogics = new UserController();
+                    $userLogics->handleRequest();
                     include "./view/registration.php";
                 break;
                 case "login":
+                    $userLogic = new UserController();
+                    $userLogic->handleRequest();
                     include "./view/login.php";
                     break;
             }

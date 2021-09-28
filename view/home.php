@@ -1,5 +1,7 @@
-
-<section>
+<?php
+include "./view/header.php";
+?>
+<section class="flex-grow">
     <div>
         <div class="flex flex-col justify-center items-center mx-7 my-6">
             <p class="text-gray-50 text-sm lg:text-2xl">
@@ -30,3 +32,7 @@
     <?php endfor?>
   
 </section>
+
+<?php
+include "./view/footer.php";
+?>

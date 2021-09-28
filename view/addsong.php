@@ -1,6 +1,8 @@
 
-
-<section>
+<?php
+include "./view/header.php";
+?>
+<section class="flex-grow">
     <script src="./view/js/ajax.js"></script>
     <div class="flex my-10 justify-center">
         <form id="addSong" class="max-w-screen-sm bg-white border shadow-2xl border-opacity-20 border-black rounded py-10 xl:px-20 px-5 mx-5 text-parsOrange">
@@ -35,4 +37,6 @@
         </form>
     </div>
 </section>
-   
+<?php
+include "./view/footer.php";
+?>
