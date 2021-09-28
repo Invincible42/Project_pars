@@ -1,8 +1,8 @@
 <?php
-include "./controller/router.php";
+include "./controller/NavigationController.php";
 
 
-$content = new router();
+$content = new NavigationController();
 ?>
 <?php $content->handleRequest(); ?>
 <?php

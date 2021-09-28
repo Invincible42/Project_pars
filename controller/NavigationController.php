@@ -1,7 +1,7 @@
 <?php
 
 include "./controller/UserController.php";
-class router{
+class NavigationController{
     public function __construct()
     {
         
@@ -41,6 +41,10 @@ class router{
                     $userLogic->handleRequest();
                     include "./view/login.php";
                     break;
+                default:
+                include "./view/home.php";
+                break;
+                
             }
         }catch(Exception $e){
             throw $e;
