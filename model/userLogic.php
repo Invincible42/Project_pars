@@ -11,8 +11,11 @@ class userLogic{
     public function createUser($username, $password, $repassword) {
         try{
             if ($password === $repassword) {
+                $hashed = password_hash($password, PASSWORD_DEFAULT);
                 $sql= "INSERT INTO users (username, password) VALUES (?, ?)";
-                $result = $this->Datahandler->createData($sql, [$username, $password]);
+                $result = $this->Datahandler->createData($sql, [$username, $hashed]);
+                http_response_code(302);
+                header("Location: ?route=login");
                 return $result;
             }
             exit();
@@ -36,6 +39,14 @@ class userLogic{
             $sql = "SELECT * FROM users WHERE ID = ?";
             $result = $this->Datahandler->readData($sql, $id);
             return $result;
+        }catch(Exception $e){
+            throw $e;
+        }
+    }
+
+    public function loginUser() {
+        try {
+
         }catch(Exception $e){
             throw $e;
         }
