@@ -18,7 +18,7 @@ class userLogic{
                 header("Location: ?route=login");
                 return $result;
             }
-            exit();
+            
         }catch(Exception $e){
             throw $e;
         }

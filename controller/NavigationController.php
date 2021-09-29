@@ -1,10 +1,10 @@
 <?php
 
-include "./controller/UserController.php";
+
 class NavigationController{
     public function __construct()
     {
-        
+        require_once "./controller/UserController.php";
     }
 
     public function handleRequest(){
