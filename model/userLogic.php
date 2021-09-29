@@ -44,9 +44,15 @@ class userLogic{
         }
     }
 
-    public function loginUser() {
+    public function loginUser($username, $password) {
         try {
-
+            $sql = "SELECT * FROM users WHERE username = ?";
+            $result = $this->Datahandler->readData($sql, $username);
+            if(password_verify($password, $result['password'])) {
+                $_SESSION['loggedin'] = true;
+            } else {
+                $_SESSION['loggedin'] = false;
+            }
         }catch(Exception $e){
             throw $e;
         }

@@ -41,7 +41,22 @@ module.exports = {
         "750": "#2B3544",
         "800": "#1F2937",
         "900": "#111827"
-      }
+      },
+      playlistOrange: {
+        DEFAULT: "#E86A4D"
+      },
+      playlistBlue: {
+        DEFAULT: "#7AE7C7"
+      },
+      playlistAqua: {
+        DEFAULT: "#4a9681"
+      },
+      playlistPink: {
+        DEFAULT: "#FF4782"
+      },
+      playlistYellow: {
+        DEFAULT: "#ffbb33"
+      },
     },
     fontFamily:{
       speed: ['A4 Speed']

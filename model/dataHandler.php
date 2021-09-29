@@ -26,9 +26,9 @@ class DataHandler{
         return $stmt->execute($args);
     }
 
-    function readData($sqlRead, $id) {
+    function readData($sqlRead, $arg) {
         $stmt = $this->handle->prepare($sqlRead);
-        $stmt->execute([$id]);
+        $stmt->execute([$arg]);
         $result= $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $result;
@@ -50,6 +50,7 @@ class DataHandler{
         $stmt = $this->handle->prepare($sqlDelete);
         return $stmt->execute();
     }
+
     function __destruct(){
         $this->handle= null;
     }

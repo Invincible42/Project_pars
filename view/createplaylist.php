@@ -14,7 +14,13 @@ include "./view/header.php";
             </div>
             <div class="my-4">
                 <span>Playlist Color</span>
-                <input type="text" name="playllistColor" id="" class="w-full bg-gray-600 border-parsOrange border-2  rounded p-1 focus:outline-none">
+                <select type="text" name="playlistColor" class="w-full bg-gray-600 border-parsOrange border-2  rounded p-1 focus:outline-none">
+                    <option value="bg-playlistBlue">Blue</option>
+                    <option value="bg-playlistAqua">Aqua</option>
+                    <option value="bg-playlistOrange">Orange</option>
+                    <option value="bg-playlistPink">Pink</option>
+                    <option value="bg-playlistYellow">Yellow</option>
+                </select>
             </div>
             <div class="my-4 flex justify-center">
                 <button onclick="submitForm('makePlaylist', 'index.php?action=create', 'index.php?route=home')" class="p-2 bg-gray-600 hover:bg-gray-800 hover:text-parsDarkOrange rounded">Make playlist</button>
