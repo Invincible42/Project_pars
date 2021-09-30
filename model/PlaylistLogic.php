@@ -1,7 +1,7 @@
 <?php
 require_once dirname(__FILE__) . "/dataHandler.php";
 
-class PlaylistLogic {
+class playlistLogic {
 
     public function __construct() {
         $username = fgets(fopen("./model/username.txt", "r"));
@@ -12,13 +12,23 @@ class PlaylistLogic {
 
     function createPlaylist($title, $color) {
         try{
-            $sql= "INSERT INTO playlist (playlistName, playlistColor) VALUES (?, ?)";
+            $sql = "INSERT INTO playlist (playlistName, playlistColor) VALUES (?, ?)";
             $result = $this->Datahandler->createData($sql, [$title, $color]);
             exit();
         }catch(Exception $e){
             throw $e;
         }
     }
+
+    // function readAllPlaylists() {
+    //     try{
+    //         $sql = "SELECT * FROM playlist";
+    //         $result = $this->Datahandler->readData();
+    //         exit();
+    //     }catch(Exception $e){
+    //         throw $e;
+    //     }
+    // }
 
 }
 

@@ -5,6 +5,7 @@ class NavigationController{
     public function __construct()
     {
         require_once "./controller/UserController.php";
+        require_once "./controller/PlaylistController.php";
     }
 
     public function handleRequest(){
@@ -18,9 +19,13 @@ class NavigationController{
                     include "./view/addsong.php";
                     break;
                 case "create-playlist":
+                    $playlistLogic = new PlaylistController();
+                    $playlistLogic->handleRequest();
                     include "./view/createplaylist.php";
                     break;
                 case "my-library":
+                    // $playlistLogic = new PlaylistController();
+                    // $playlistLogic->collectReadAllPlaylists();
                     include "./view/my-library.php";
                     break;    
                 case "account":

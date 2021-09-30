@@ -1,11 +1,11 @@
 <?php
-require_once dirname(__FILE__) . '/../model/PlaylistLogic.php';
+require_once dirname(__FILE__) . '/../model/playlistLogic.php';
 
 class PlaylistController{
-    private $PlaylistLogic;
+    private $playlistLogic;
     public function __construct()
     {
-        $this->Playlistlogic = new PlaylistLogic();
+        $this->playlistLogic = new playlistLogic();
     }
 
     public function handleRequest(){
@@ -19,7 +19,7 @@ class PlaylistController{
                   
                     break;
                 case "read":
-                   
+                    // $this->collectReadAllPlaylists();
                     break;
                 case "delete":
                 
@@ -38,8 +38,12 @@ class PlaylistController{
         if(!isset($_REQUEST['playlistTitle'])) throw new Exception();
         if(!isset($_REQUEST['playlistColor'])) throw new Exception();
 
-        $this->PlaylistLogic->createPlaylist($_REQUEST['playlistTitle'], $_REQUEST['playlistColor']);
+        $this->playlistLogic->createPlaylist($_REQUEST['playlistTitle'], $_REQUEST['playlistColor']);
     }
+
+    // function collectReadAllPlaylists() {
+    //     $this->playlistLogic->readAllPlaylists();
+    // }
 
 }
 ?>
