@@ -28,6 +28,9 @@ class PlaylistController{
                 case "add":
                 
                     break;
+                case "search":
+                        $this->collectSearchPlaylist();
+                    break;
             }
         }catch(Exception $e){
             throw $e;
@@ -40,6 +43,13 @@ class PlaylistController{
 
         $this->playlistLogic->createPlaylist($_REQUEST['playlistTitle'], $_REQUEST['playlistColor']);
     }
+
+    function collectSearchPlaylist() {
+        $search = isset($_REQUEST['search'])? $_REQUEST['search']: NULL;
+
+        $this->playlistLogic->searchPlaylist($search);
+    }
+
 
     // function collectReadAllPlaylists() {
     //     $this->playlistLogic->readAllPlaylists();

@@ -20,6 +20,16 @@ class playlistLogic {
         }
     }
 
+    function searchPlaylist($search) {
+        try{
+            $sql = "SELECT ID, creatorID, playlistName, playlistColor, created_at FROM playlist WHERE playlistname LIKE %?%'";
+            return $this->Datahandler->readDatas($sql);
+            exit();
+        }catch(Exception $e){
+            throw $e;
+        }
+    }
+
     // function readAllPlaylists() {
     //     try{
     //         $sql = "SELECT * FROM playlist";
