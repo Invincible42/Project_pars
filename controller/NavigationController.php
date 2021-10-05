@@ -42,9 +42,19 @@ class NavigationController{
                     include "./view/registration.php";
                 break;
                 case "login":
-                    $userLogic = new UserController();
-                    $userLogic->handleRequest();
-                    include "./view/login.php";
+                    if(isset($_SESSION['loggedin'])){
+                        if($_SESSION['loggedin'] == true){
+                            session_destroy();
+                            session_unset();
+                            unset($_SESSION["loggedin"]);
+                            header("location: index.php?route=home");
+                        }
+                    }else{
+                        
+                        $userLogic = new UserController();
+                        $userLogic->handleRequest();
+                        include "./view/login.php";
+                    }
                     break;
                 default:
                 include "./view/home.php";

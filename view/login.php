@@ -3,7 +3,7 @@ include "./view/header.php";
 ?>
 <section class="flex-grow">
     <div class="flex my-10 justify-center">
-        <form id="login" class="max-w-screen-sm bg-white border shadow-2xl border-opacity-20 border-black rounded py-10 xl:px-20 px-5 mx-5 text-parsOrange" method="POST">
+        <form id="login" class="max-w-screen-sm bg-white border shadow-2xl border-opacity-20 border-black rounded py-10 xl:px-20 px-5 mx-5 text-parsOrange" action="index.php?route=login&action=login" method="POST">
             <div class="mb-4">
                 <span class="text-3xl">Login</span>
             </div>

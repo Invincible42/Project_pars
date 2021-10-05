@@ -49,9 +49,9 @@ class UserController {
     }
 
     public function collectLoginUser() {
-        if(!isset($_REQUEST["username"])) throw new Exception();
-        if(!isset($_REQUEST["password"])) throw new Exception();
-        $this->Userlogic->loginUser();
+        $username =  isset($_REQUEST['username'])? $_REQUEST['username']: NULL;
+        $password = isset($_REQUEST['password'])? $_REQUEST['password']: NULL;
+        $this->Userlogic->loginUser($username, $password);
     }
 }
 ?>

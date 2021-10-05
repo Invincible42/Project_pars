@@ -5,10 +5,7 @@ $content = new NavigationController();
 
 session_start();
 
-if(isset($_SESSION['loggedin']) && $_SESSION == true) {
-
-}
-
+var_dump($_SESSION);
 ?>
 <?php $content->handleRequest(); ?>
 <?php

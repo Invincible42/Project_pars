@@ -46,12 +46,19 @@ class userLogic{
 
     public function loginUser($username, $password) {
         try {
-            $sql = "SELECT * FROM users WHERE username = ?";
+            $sql = "SELECT id,password FROM users WHERE username = ?";
             $result = $this->Datahandler->readData($sql, $username);
-            if(password_verify($password, $result['password'])) {
+            
+            var_dump($password, $result);
+            if(password_verify($password, $result[0]['password'])) {
+                $_SESSION['id'] = $result[0]['id'];
                 $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $username;
+                http_response_code(302);
+                return header("location: index.php?route=home");
             } else {
                 $_SESSION['loggedin'] = false;
+                return;
             }
         }catch(Exception $e){
             throw $e;
