@@ -21,7 +21,7 @@ class NavigationController{
                             include "./view/addsong.php";
                         }
                     }else {
-                        header("location: index.php?route=home");
+                        header("location: index.php?route=login");
                     }
                     break;
                 case "create-playlist":
@@ -32,7 +32,7 @@ class NavigationController{
                             include "./view/createplaylist.php";
                         }
                     }else {
-                        header("location: index.php?route=home");
+                        header("location: index.php?route=login");
                     }
                     break;
                 case "my-library":
@@ -43,7 +43,7 @@ class NavigationController{
                             include "./view/my-library.php";
                         }
                     }else {
-                        header("location: index.php?route=home");
+                        header("location: index.php?route=login");
                     }
                     break;
                 case "playlist":
