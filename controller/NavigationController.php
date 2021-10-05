@@ -16,23 +16,36 @@ class NavigationController{
                     include "./view/home.php";
                     break;
                 case "add-music":
-                    include "./view/addsong.php";
+                    if(isset($_SESSION['loggedin'])){
+                        if($_SESSION['loggedin'] == true){
+                            include "./view/addsong.php";
+                        }
+                    }else {
+                        header("location: index.php?route=home");
+                    }
                     break;
                 case "create-playlist":
-                    $playlistLogic = new PlaylistController();
-                    $playlistLogic->handleRequest();
-                    include "./view/createplaylist.php";
+                    if(isset($_SESSION['loggedin'])){
+                        if($_SESSION['loggedin'] == true){
+                            $playlistLogic = new PlaylistController();
+                            $playlistLogic->handleRequest();
+                            include "./view/createplaylist.php";
+                        }
+                    }else {
+                        header("location: index.php?route=home");
+                    }
                     break;
                 case "my-library":
-                    // $playlistLogic = new PlaylistController();
-                    // $playlistLogic->collectReadAllPlaylists();
-                    include "./view/my-library.php";
-                    break;    
-                case "account":
-                    $userLogics = new UserController();
-                    $userLogics->handleRequest();
-                    include "./view/account.php";
-                break;    
+                    if(isset($_SESSION['loggedin'])){
+                        if($_SESSION['loggedin'] == true){
+                            // $playlistLogic = new PlaylistController();
+                            // $playlistLogic->collectReadAllPlaylists();
+                            include "./view/my-library.php";
+                        }
+                    }else {
+                        header("location: index.php?route=home");
+                    }
+                    break;
                 case "playlist":
                     include "./view/playlist.php";
                 break;
@@ -50,7 +63,6 @@ class NavigationController{
                             header("location: index.php?route=home");
                         }
                     }else{
-                        
                         $userLogic = new UserController();
                         $userLogic->handleRequest();
                         include "./view/login.php";
