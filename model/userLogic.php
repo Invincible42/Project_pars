@@ -48,8 +48,7 @@ class userLogic{
         try {
             $sql = "SELECT id,password FROM users WHERE username = ?";
             $result = $this->Datahandler->readData($sql, $username);
-            
-            var_dump($password, $result);
+
             if(password_verify($password, $result[0]['password'])) {
                 $_SESSION['id'] = $result[0]['id'];
                 $_SESSION['loggedin'] = true;
