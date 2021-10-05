@@ -23,7 +23,7 @@ include "./view/header.php";
                 </select>
             </div>
             <div class="my-4 flex justify-center">
-                <button onclick="submitForm('createPlaylist', 'index.php?action=create&route=create-playlist')" class="p-2 bg-gray-600 hover:bg-gray-800 hover:text-parsDarkOrange rounded">Make playlist</button>
+                <button onclick="submitForm('createPlaylist', 'index.php?action=create&route=create-playlist', 'index.php?route=my-library')" class="p-2 bg-gray-600 hover:bg-gray-800 hover:text-parsDarkOrange rounded">Make playlist</button>
             </div>
         </form>
     </div>

@@ -14,8 +14,22 @@
         <div class="ml-4">
             <a href="?route=home"><h2 class="text-4xl text-parsOrange m-auto my-2 font-speed hover:text-parsDarkOrange">PARS</h2></a>
         </div>
-        <div class="mr-4">
-            <a href="?route=login" class="material-icons text-4xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">account_circle</a>
+        <?php if(isset($_SESSION['loggedin'])):?>
+        <?php if($_SESSION['loggedin'] == true):?>
+        <div class="m-auto flex items-center hidden lg:block">
+            <p class="font-speed text-3xl text-gray-50"> WELCOME <span class="text-parsOrange"><?php echo $_SESSION['username'];?></span></p>
+        </div>
+        <?php endif; endif;?>
+        <div class="mr-4 flex  items-center">
+            <?php if(isset($_SESSION['loggedin'])):?>
+            <?php if($_SESSION['loggedin'] == true):?>
+                <a href="?route=login" class="font-speed text-3xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">Logout</a>
+            
+            <?php endif;?>
+            <?php else:?>
+                
+                <a href="?route=login" class="font-speed text-3xl text-parsOrange hover:text-parsDarkOrange m-auto my-2">login</a>
+            <?php endif;?>
         </div>
     </div>
 

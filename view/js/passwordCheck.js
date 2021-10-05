@@ -29,3 +29,7 @@ function checkPasswords(event){
         return true
     }
 }
+
+function checkUsername(event){
+    
+}

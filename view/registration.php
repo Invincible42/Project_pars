@@ -4,13 +4,13 @@ include "./view/header.php";
 <section class="flex-grow">
 
     <div class="flex my-10 justify-center">
-        <form onsubmit="return checkPasswords(event)" class="max-w-screen-sm bg-white border shadow-2xl border-opacity-20 border-black rounded py-10 xl:px-20 px-5 mx-5 text-parsOrange" method="POST" action="index.php?route=registration&action=create">
+        <form onsubmit="return checkRegistration(event)" class="max-w-screen-sm bg-white border shadow-2xl border-opacity-20 border-black rounded py-10 xl:px-20 px-5 mx-5 text-parsOrange" method="POST" action="index.php?route=registration&action=create">
             <div class="mb-4">
                 <span class="text-3xl">Register</span>
             </div>
             <div class="my-4">
                 <span>Username</span>
-                <input type="text" name="username" class="w-full bg-gray-600 border-parsOrange border-2 rounded p-1 focus:outline-none" pattern="[A-Za-z0-9]+" required>
+                <input type="text" id="username" name="username" class="w-full bg-gray-600 border-parsOrange border-2 rounded p-1 focus:outline-none" pattern="[A-Za-z0-9]+" required>
             </div>
             <div class="my-4">
                 <span>Password</span>

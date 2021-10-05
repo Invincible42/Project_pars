@@ -38,10 +38,11 @@ class PlaylistController{
     }
 
     function collectCreatePlaylist() {
-        if(!isset($_REQUEST['playlistTitle'])) throw new Exception();
-        if(!isset($_REQUEST['playlistColor'])) throw new Exception();
+        $playlistTitle = isset($_REQUEST['playlistTitle'])? $_REQUEST["playlistTitle"]: NULL;
+        $playlistColor = isset($_REQUEST['playlistColor'])? $_REQUEST["playlistColor"]: NULL;
+        $user_id = isset($_SESSION['id'])? $_SESSION['id']: NULL;
 
-        $this->playlistLogic->createPlaylist($_REQUEST['playlistTitle'], $_REQUEST['playlistColor']);
+        $this->playlistLogic->createPlaylist($user_id, $playlistTitle, $playlistColor);
     }
 
     function collectSearchPlaylist() {
