@@ -10,10 +10,10 @@ class playlistLogic {
         $this->Datahandler = new DataHandler($dbasename, $username, $password);
     }
 
-    function createPlaylist($id, $title, $color) {
+    function createPlaylist($title, $color) {
         try{
-            $sql = "INSERT INTO playlist (CreatorId, playlistName, playlistColor) VALUES (?, ?)";
-            $result = $this->Datahandler->createData($sql, [$id, $title, $color]);
+            $sql = "INSERT INTO playlist (playlistName, playlistColor) VALUES (?, ?)";
+            $result = $this->Datahandler->createData($sql, [$title, $color]);
             exit();
         }catch(Exception $e){
             throw $e;
