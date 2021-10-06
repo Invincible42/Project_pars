@@ -23,7 +23,7 @@ class playlistLogic {
     function searchPlaylist($search) {
         try{
             $searchValue = "%" . $search . "%";
-            $sql = "SELECT playlist.playlistName, playlist.playlistColor, users.username FROM playlist INNER JOIN users WHERE playlist.creatorID = users.ID AND playlistName LIKE ?";
+            $sql = "SELECT * FROM playlist INNER JOIN users WHERE playlist.creatorID = users.ID AND playlistName LIKE ?";
             return $this->Datahandler->readDatas($sql, $searchValue);
         }catch(Exception $e){
             throw $e;
