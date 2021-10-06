@@ -30,8 +30,11 @@ class NavigationController{
                 case "add-music":
                     if(isset($_SESSION['loggedin'])){
                         if($_SESSION['loggedin'] == true){
+                            $_REQUEST['action'] = "read";
                             $SongController = new SongController;
                             $SongController->handleRequest();
+
+                            $result = $this->playlistLogic->handleRequest();
                             include "./view/addsong.php";
                         }
                     }else {
@@ -41,7 +44,8 @@ class NavigationController{
                 case "create-playlist":
                     if(isset($_SESSION['loggedin'])){
                         if($_SESSION['loggedin'] == true){
-                            $this->playlistLogic->handleRequest();
+                            $result = $this->playlistLogic->handleRequest();
+
                             include "./view/createplaylist.php";
                         }
                     }else {

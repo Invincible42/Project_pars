@@ -19,7 +19,8 @@ class PlaylistController{
                   
                     break;
                 case "read":
-                    // $this->collectReadAllPlaylists();
+                    $result = $this->collectUserPlaylist();
+                    return $result;
                     break;
                 case "delete":
                 
@@ -36,6 +37,13 @@ class PlaylistController{
         }catch(Exception $e){
             throw $e;
         }
+    }
+
+    function collectUserPlaylist() {
+        $userID = isset($_SESSION['id'])? $_SESSION['id']: NULL;
+
+        $result = $this->playlistLogic->getPlaylists($userID);
+        return $result;
     }
 
     function collectCreatePlaylist() {

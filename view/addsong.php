@@ -20,7 +20,9 @@ include "./view/header.php";
             <div class="my-4">
                 <span>Select playlist</span>
                 <select class="w-full focus:outline-none bg-gray-600 border-parsOrange border-2  p-1 rounded" name="playlist">
-                    <option>Playlist #1</option>
+                    <?php foreach ($result as $playlist): ?>
+                    <option value="<?php echo $playlist['playlistName']; ?>"><?php echo $playlist['playlistName']; ?></option>
+                    <?php endforeach; ?>
                 </select>
             </div>
             <div class="flex justify-center">

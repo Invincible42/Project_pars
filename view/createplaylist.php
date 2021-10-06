@@ -4,7 +4,7 @@ include "./view/header.php";
 <section class="flex-grow">
     <script src="./view/js/ajax.js"></script>
     <div class="flex my-10 justify-center">
-        <form id="createPlaylist" method="POST" class="max-w-screen-sm bg-white border shadow-2xl border-opacity-20 border-black rounded py-10 xl:px-20 px-5 mx-5 text-parsOrange">
+        <form id="createPlaylist" method="post" class="max-w-screen-sm bg-white border shadow-2xl border-opacity-20 border-black rounded py-10 xl:px-20 px-5 mx-5 text-parsOrange">
             <div class="mb-4">
                 <span class="text-3xl">Create your playlist</span>
             </div>
@@ -22,7 +22,10 @@ include "./view/header.php";
                 </select>
             </div>
             <div class="my-4 flex justify-center">
-                <button onclick="submitForm('createPlaylist', 'index.php?action=create&route=create-playlist', 'index.php?route=my-library')" class="p-2 bg-gray-600 hover:bg-gray-800 hover:text-parsDarkOrange rounded">Make playlist</button>
+                <input type="hidden" name="route" value="create-playlist">
+                <input type="hidden" name="action" value="create">
+
+                <button type="submit" class="p-2 bg-gray-600 hover:bg-gray-800 hover:text-parsDarkOrange rounded">Make playlist</button>
             </div>
         </form>
     </div>

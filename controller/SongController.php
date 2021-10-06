@@ -18,7 +18,7 @@ class SongController{
                 case "update":
                   
                     break;
-                case "read":
+                case "read-song":
                    
                     break;
                 case "delete":
