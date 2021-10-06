@@ -50,9 +50,15 @@ class NavigationController{
                     include "./view/playlist.php";
                 break;
                 case "registration":
-                    $userLogics = new UserController();
-                    $userLogics->handleRequest();
-                    include "./view/registration.php";
+                    if(isset($_SESSION['loggedin'])){
+                        if($_SESSION['loggedin'] == true){
+                            header("location: index.php?route=login");
+                        }
+                    }else {
+                        $userLogics = new UserController();
+                        $userLogics->handleRequest();
+                        include "./view/registration.php";
+                    }
                 break;
                 case "login":
                     if(isset($_SESSION['loggedin'])){
