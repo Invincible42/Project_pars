@@ -16,7 +16,6 @@ class playlistLogic {
             $resultPlaylist = $this->Datahandler->createData($sqlPlayList, [$user_id, $title, $color]);
 
             $playlistID = $this->getPlaylistID();
-            var_dump($playlistID);
             $sqlPlayListToUser = "INSERT INTO playlist_to_user (playlistID, userID) VALUES (?, ?)";
             $resultPlaylistToUser = $this->Datahandler->createData($sqlPlayListToUser, [$playlistID[0]['LAST_INSERT_ID()'], $user_id]);
             return;
@@ -47,8 +46,8 @@ class playlistLogic {
 
     function getPlaylists($user_id) {
         try {
-            $sql = "SELECT * FROM playlist_to_user INNER JOIN playlist WHERE playlist_to_user.userID = ? GROUP BY playlist.ID";
-            $result = $this->Datahandler->readDatas($sql, [$user_id]);
+            $sql = "SELECT * FROM playlist_to_user INNER JOIN playlist INNER JOIN users WHERE playlist_to_user.userID = ? AND playlist.creatorID = ? GROUP BY playlist.ID";
+            $result = $this->Datahandler->readDatas($sql, [$user_id, $user_id]);
             return $result;
         } catch(Exception $e){
             throw $e;

@@ -19,7 +19,7 @@ include "./view/header.php";
         <form id="search" class="flex xl:mx-96 mx-5 my-4">
             <input type="hidden" name="route" value="home">
             <input type="hidden" name="action" value="search">
-            <input type="text" placeholder="Search for songs or playlists...." name="search" id="" class=" focus:outline-none bg-gray-600 border-parsOrange p-1 border-2 rounded mx-auto mr-3 w-full focus:text-parsYellow">
+            <input type="text" placeholder="Search for playlists...." name="search" id="" class=" focus:outline-none bg-gray-600 border-parsOrange p-1 border-2 rounded mx-auto mr-3 w-full focus:text-parsYellow">
             <button onclick="searchForm('search', 'index.php?action=search&route=home', sendToContent)"  class="rounded mx-auto"><span class="material-icons rounded-full hover:bg-gray-800 text-parsOrange hover:text-parsDarkOrange p-1.5 text-3xl">search</span></button>
         </form>
     </div>

@@ -52,6 +52,8 @@ class PlaylistController{
         $user_id = isset($_SESSION['id'])? $_SESSION['id']: NULL;
 
         $this->playlistLogic->createPlaylist($user_id, $playlistTitle, $playlistColor);
+
+        header("location: index.php?route=my-library");
     }
 
     function collectSearchPlaylist() {

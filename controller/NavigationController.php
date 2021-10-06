@@ -55,6 +55,8 @@ class NavigationController{
                 case "my-library":
                     if(isset($_SESSION['loggedin'])){
                         if($_SESSION['loggedin'] == true){
+                            $_REQUEST['action'] = "read";
+                            $result = $this->playlistLogic->handleRequest();
                             // $playlistLogic = new PlaylistController();
                             // $playlistLogic->collectReadAllPlaylists();
                             include "./view/my-library.php";
