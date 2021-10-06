@@ -30,10 +30,10 @@ class NavigationController{
                 case "add-music":
                     if(isset($_SESSION['loggedin'])){
                         if($_SESSION['loggedin'] == true){
-                            $_REQUEST['action'] = "read";
+                            
                             $SongController = new SongController;
                             $SongController->handleRequest();
-
+                            $_REQUEST['action'] = "read";
                             $result = $this->playlistLogic->handleRequest();
                             include "./view/addsong.php";
                         }
