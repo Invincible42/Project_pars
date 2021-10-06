@@ -45,9 +45,6 @@ module.exports = {
       playlistOrange: {
         DEFAULT: "#E86A4D"
       },
-      playlistBlue: {
-        DEFAULT: "#7AE7C7"
-      },
       playlistAqua: {
         DEFAULT: "#4a9681"
       },
