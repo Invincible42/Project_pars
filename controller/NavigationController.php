@@ -16,7 +16,14 @@ class NavigationController{
             $route =  isset($_REQUEST['route'])? $_REQUEST['route']: NULL;
             switch($route){
                 case "home":
-                    $result = $this->playlistLogic->handleRequest();
+                    if(isset($_REQUEST['action'])){
+                        $result = $this->playlistLogic->handleRequest();
+                    }else{
+                        $_REQUEST['action'] = "search";
+                        $_REQUEST['search']= "";
+                        $result = $this->playlistLogic->handleRequest();
+                    }
+                  
                     include "./view/home.php";
                     break;
                 case "add-music":
@@ -78,6 +85,9 @@ class NavigationController{
                     }
                     break;
                 default:
+                    $_REQUEST['action'] = "search";
+                    $_REQUEST['search']= "";
+                    $result = $this->playlistLogic->handleRequest();
                 include "./view/home.php";
                 break;
                 
