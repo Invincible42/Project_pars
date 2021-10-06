@@ -21,7 +21,7 @@ include "./view/header.php";
                 <span>Select playlist</span>
                 <select class="w-full focus:outline-none bg-gray-600 border-parsOrange border-2  p-1 rounded" name="playlist">
                     <?php foreach ($result as $playlist): ?>
-                    <option value="<?php echo $playlist['playlistName']; ?>"><?php echo $playlist['playlistName']; ?></option>
+                    <option value="<?php echo $playlist['playlistID']; ?>"><?php echo $playlist['playlistName']; ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>
