@@ -12,9 +12,19 @@ class songLogic {
 
     function createSong($title, $artist,  $creatorID) {
         try{
-           $sql = "INSERT INTO songs (title, artist, creatorID) VALUES (?,?,?)";
-           $this->Datahandler->createData($sql, [$title, $artist, $creatorID]);
-            exit();
+           $sql = "INSERT INTO song (songName, artist, creatorID) VALUES (?,?,?)";
+           return $this->Datahandler->createData($sql, [$title, $artist, $creatorID]);
+           
+        }catch(Exception $e){
+            throw $e;
+        }
+    }
+
+    function getSongID(){
+        try{
+            $sql ="SELECT LAST_INSERT_ID() FROM song LIMIT 1";
+            return $this->Datahandler->readData($sql, '');
+
         }catch(Exception $e){
             throw $e;
         }

@@ -31,20 +31,21 @@ class SongController{
     }
 
     function createSong(){
-        $title = isset($_REQUEST['title'])? $_REQUEST['title']: NULL;
+        $title = isset($_REQUEST['songtitle'])? $_REQUEST['songtitle']: NULL;
         $artist = isset($_REQUEST['artist'])? $_REQUEST['artist']: NULL;
         $creatorID= isset($_SESSION['id'])? $_SESSION['id']: NULL;
+        
         $this->songlogic->createSong($title, $artist, $creatorID);
-        $this->songLogic->getSongID();
+        $songID = $this->songlogic->getSongID();
 
-        $this->addFileLocal($SongID);
+        $this->addFileLocal($songID);
 
 
     }
 
     function addFileLocal($songID){
         try{
-            move_uploaded_file($_FILES['file']['tmp_name'], "./music/".$songID);
+            move_uploaded_file($_FILES['file']['tmp_name'], "./music/".$songID[0]['LAST_INSERT_ID()'].".mp3");
         } catch(Exception $e){
             throw $e;
         }
