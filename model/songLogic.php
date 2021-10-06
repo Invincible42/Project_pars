@@ -10,9 +10,10 @@ class songLogic {
         $this->Datahandler = new DataHandler($dbasename, $username, $password);
     }
 
-    function createSong($user_id, $title) {
+    function createSong($title, $artist,  $creatorID) {
         try{
-           
+           $sql = "INSERT INTO songs (title, artist, creatorID) VALUES (?,?,?)";
+           $this->Datahandler->createData($sql, [$title, $artist, $creatorID]);
             exit();
         }catch(Exception $e){
             throw $e;

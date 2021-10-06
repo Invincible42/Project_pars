@@ -8,6 +8,7 @@ class NavigationController{
     {
         require_once "./controller/UserController.php";
         require_once "./controller/PlaylistController.php";
+        require_once "./controller/SongController.php";
         $this->playlistLogic = new PlaylistController();
     }
 
@@ -29,6 +30,8 @@ class NavigationController{
                 case "add-music":
                     if(isset($_SESSION['loggedin'])){
                         if($_SESSION['loggedin'] == true){
+                            $SongController = new SongController;
+                            $SongController->handleRequest();
                             include "./view/addsong.php";
                         }
                     }else {
