@@ -2,10 +2,13 @@
 
 
 class NavigationController{
+    private $playlistLogic;
+
     public function __construct()
     {
         require_once "./controller/UserController.php";
         require_once "./controller/PlaylistController.php";
+        $this->playlistLogic = new PlaylistController();
     }
 
     public function handleRequest(){
@@ -13,6 +16,7 @@ class NavigationController{
             $route =  isset($_REQUEST['route'])? $_REQUEST['route']: NULL;
             switch($route){
                 case "home":
+                    $result = $this->playlistLogic->handleRequest();
                     include "./view/home.php";
                     break;
                 case "add-music":
@@ -27,8 +31,7 @@ class NavigationController{
                 case "create-playlist":
                     if(isset($_SESSION['loggedin'])){
                         if($_SESSION['loggedin'] == true){
-                            $playlistLogic = new PlaylistController();
-                            $playlistLogic->handleRequest();
+                            $this->playlistLogic->handleRequest();
                             include "./view/createplaylist.php";
                         }
                     }else {

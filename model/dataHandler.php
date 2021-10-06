@@ -33,9 +33,9 @@ class DataHandler{
 
         return $result;
     }
-    function readDatas($sqlRead) {
+    function readDatas($sqlRead, $arg) {
         $stmt = $this->handle->prepare($sqlRead);
-        $stmt->execute();
+        $stmt->execute([$arg]);
         $result= $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         return $result;

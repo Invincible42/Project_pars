@@ -29,7 +29,8 @@ class PlaylistController{
                 
                     break;
                 case "search":
-                        $this->collectSearchPlaylist();
+                        $result = $this->collectSearchPlaylist();
+                        return $result;
                     break;
             }
         }catch(Exception $e){
@@ -46,15 +47,10 @@ class PlaylistController{
     }
 
     function collectSearchPlaylist() {
-        $search = isset($_REQUEST['search'])? $_REQUEST['search']: NULL;
+        $search = isset($_REQUEST['search'])? $_REQUEST['search']: "";
 
-        $this->playlistLogic->searchPlaylist($search);
+        $result = $this->playlistLogic->searchPlaylist($search);
+        return $result;
     }
-
-
-    // function collectReadAllPlaylists() {
-    //     $this->playlistLogic->readAllPlaylists();
-    // }
-
 }
 ?>

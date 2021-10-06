@@ -22,9 +22,9 @@ class playlistLogic {
 
     function searchPlaylist($search) {
         try{
-            $sql = "SELECT ID, creatorID, playlistName, playlistColor, created_at FROM playlist WHERE playlistname LIKE %?%'";
-            return $this->Datahandler->readDatas($sql);
-            exit();
+            $searchValue = "%" . $search . "%";
+            $sql = "SELECT ID, creatorID, playlistName, playlistColor, created_at FROM playlist WHERE playlistName LIKE ?";
+            return $this->Datahandler->readDatas($sql, $searchValue);
         }catch(Exception $e){
             throw $e;
         }

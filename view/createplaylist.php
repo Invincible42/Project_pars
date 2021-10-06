@@ -15,11 +15,11 @@ include "./view/header.php";
             <div class="my-4">
                 <span>Playlist Color</span>
                 <select type="text" name="playlistColor" class="w-full bg-gray-600 border-parsOrange border-2  rounded p-1 focus:outline-none">
-                    <option value="bg-playlistBlue">Blue</option>
-                    <option value="bg-playlistAqua">Aqua</option>
-                    <option value="bg-playlistOrange">Orange</option>
-                    <option value="bg-playlistPink">Pink</option>
-                    <option value="bg-playlistYellow">Yellow</option>
+                    <option value="playlistBlue">Blue</option>
+                    <option value="playlistAqua">Aqua</option>
+                    <option value="playlistOrange">Orange</option>
+                    <option value="playlistPink">Pink</option>
+                    <option value="playlistYellow">Yellow</option>
                 </select>
             </div>
             <div class="my-4 flex justify-center">
