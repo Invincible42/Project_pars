@@ -33,14 +33,15 @@ class controller{
     function createSong(){
         $title = isset($_REQUEST['title'])? $_REQUEST['title']: NULL;
         $artist = isset($_REQUEST['artist'])? $_REQUEST['artist']: NULL;
-        $mp3 = isset($_REQUEST['file'])? $_REQUEST: NULL;
+        $mp3 = isset($_FILES['file'])? $_FILES['file']: NULL;
+        $mp3Name = isset($_FILES['file']['name'])?$_FILES['file']['name']: NULL;
         $this->addFileLocal($mp3, $title);
 
 
     }
 
     function addFileLocal($mp3, $title){
-        $newSong = fopen()
+        tmpfile()
     }
 }
 ?>
